@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Forma</title>
+    <style>
+        h2 {
+            font-family: sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            color: rgb(4, 3, 3);
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        table {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: black;
+            font-weight: normal;
+            border-collapse: collapse;
+
+        }
+
+        table.inner {
+            border: 10px;
+
+        }
+
+        input[type=text],
+        input[type=email],
+        input[type=number] {
+            width: 50%;
+            padding: 6px 12px;
+            margin: 3px 0px;
+            box-sizing: border-box;
+        }
+
+
+
+        input[type=submit],
+        input[type=reset] {
+            width: 50%;
+            padding: 8px 12px;
+            margin: 13px 0px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Student form </h2>
+    <table align="center" cell padding="10">
+
+        <tr>
+            <td>first name</td>
+            <td><input type="text" name="first name" maxlength="50" placeholder="abc"></td>
+        </tr>
+        <tr>
+            <td>last name</td>
+            <td><input type="text" name="last name" maxlength="50" placeholder="def"></td>
+        </tr>
+
+        <tr>
+            <td>email id</td>
+            <td><input type="email" name="email id" maxlength="50" placeholder="abc@gmail.com"></td>
+        </tr>
+
+        <tr>
+            <td>mobile number</td>
+            <td><input type="number" name="mobile number" maxlength="10" placeholder="78xxxxxxxx"></td>
+        </tr>
+
+        <tr>
+            <td>Gender</td>
+            <td><input type="radio" name="gender" value="Male"> Male
+                <input type="radio" name="gender" value="female"> Female
+            </td>
+        </tr>
+
+        <tr>
+            <td>Address <br></td>
+            <td><textarea name="Address" id="" cols="50" rows="10"></textarea></td>
+        </tr>
+
+        <tr>
+            <td>City</td>
+            <td><input type="text" name="City" id="" maxlength="20" placeholder="hyderabad"></td>
+        </tr>
+        <tr>
+            <td>Pincode</td>
+            <td><input type="number" name="pincode" id="" maxlength="6" placeholder="560089"></td>
+        </tr>
+
+        <tr>
+            <td>State</td>
+            <td><input type="text" name="State" id="" maxlength="20" placeholder="telangana"></td>
+        </tr>
+
+        <tr>
+            <td>Country</td>
+            <td><input type="text" name="country" id="" maxlength="20" placeholder="India"></td>
+        </tr>
+
+        <tr>
+            <td>Qualification</td>
+            <td><input type="checkbox" name="Qualification" value="high school (10th)" id="">High School (10th)
+                <input type="checkbox" name="Qualification" value="high school (12th)" id="">high school (12th)
+                <input type="checkbox" name="Qualification" value="graduation" id="">Graduation
+                <input type="checkbox" name="Qualification" value="post graduation" id="">Post Graduation
+            </td>
+        </tr>
+        <tr>
+            <td>Courses (Select all that apply)</td>
+            <td><input type="radio" name="course[]" value="BE" id="">BE
+                <input type="radio" name="course[]" value="BCA" id="">BCA
+                <input type="radio" name="course[]" value="BBA" id="">BBA
+                <input type="radio" name="course[]" value="MBA" id="">MBA
+            </td>
+        </tr>
+
+
+        <tr>
+            <td colspan="2" align="center"><input type="submit" value="submit">
+                <input type="reset" value="reset">
+            </td>
+        </tr>
+
+    </table>
+</body>
+
+</html>
