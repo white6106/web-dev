@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dynamic Web Content</title>
+</head>
+<body>
+    <h1>Dynamically Displaying Data</h1>
+    
+    <div id="dataDisplay"></div>
+    
+    <h2>Allow User Input</h2>
+    <input type="text" id="userInput">
+    <button onclick="addData()">Add Data</button>
+    
+    <script>
+        var dataArray = []; // Array to store data
+        
+        // Function to dynamically display data
+        function displayData() {
+            var displayDiv = document.getElementById("dataDisplay");
+            displayDiv.innerHTML = ""; // Clear previous content
+            
+            if (dataArray.length === 0) {
+                displayDiv.innerHTML = "<p>No data available.</p>";
+            } else {
+                var ul = document.createElement("ul");
+                dataArray.forEach(function(item) {
+                    var li = document.createElement("li");
+                    li.textContent = item;
+                    ul.appendChild(li);
+                });
+                displayDiv.appendChild(ul);
+            }
+        }
+        
+        // Function to allow user input and add data to the array
+        function addData() {
+            var userInput = document.getElementById("userInput").value;
+            if (userInput.trim() !== "") {
+                dataArray.push(userInput);
+                displayData();
+                document.getElementById("userInput").value = ""; // Clear input field
+            } else {
+                alert("Please enter valid data.");
+            }
+        }
+        displayData();
+    </script>
+</body>
+</html>

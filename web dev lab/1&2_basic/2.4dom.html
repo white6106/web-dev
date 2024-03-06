@@ -1,0 +1,22 @@
+<html>
+
+<head>
+    <title>DOM Manipulation</title>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Hello, World!</h1>
+        <p>This is a paragraph.</p>
+        <button id="button">Change Text</button>
+    </div>
+
+    <script>
+        document.getElementById("button").addEventListener("click", function () {
+            document.querySelector("h1").innerText = "Welcome!";
+            document.querySelector("p").innerText = "This text has been changed.";
+        });
+    </script>
+</body>
+
+</html>
